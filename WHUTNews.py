@@ -38,7 +38,7 @@ def GetNews():
     items = p.findall(page)
     news = []
     for item in items:
-        # if(item[2] == time.strftime('%Y-%m-%d',time.localtime(time.time()))):
+        if(item[2] == time.strftime('%Y-%m-%d',time.localtime(time.time()))):
             news.append([item[0], item[1], item[2]])
     return news
 
